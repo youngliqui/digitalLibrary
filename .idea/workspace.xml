@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Person.java" afterDir="false" />
+    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="add person and book models">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/MySpringMvcDispatcherServletInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/SpringConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties.origin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +53,9 @@
       </UrlAndAccount>
     </option>
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -69,9 +75,18 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "spring.configuration.checksum": "df5b2b3de9c45ddfa677902ff25b5274",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -83,6 +98,7 @@
       <option name="presentableId" value="Default" />
       <updated>1696601562988</updated>
       <workItem from="1696601564159" duration="1000" />
+      <workItem from="1696608302347" duration="3835000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -112,8 +128,18 @@
       <option name="project" value="LOCAL" />
       <updated>1696602549873</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add person and book models">
+      <created>1696604632725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1696604632725</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -141,6 +167,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial commit" />
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="add person and book models" />
+    <option name="LAST_COMMIT_MESSAGE" value="add person and book models" />
   </component>
 </project>
