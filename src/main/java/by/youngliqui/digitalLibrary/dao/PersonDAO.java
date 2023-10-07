@@ -40,7 +40,7 @@ public class PersonDAO {
                 person.getName(), person.getBirthYear(), person.getEmail());
     }
 
-    public void edit(int id, Person updatedPerson) {
+    public void update(int id, Person updatedPerson) {
         jdbcTemplate.update("UPDATE Person SET name=?, birthYear=?, email=? WHERE id=?",
                 updatedPerson.getName(), updatedPerson.getBirthYear(), updatedPerson.getEmail(), id);
     }
