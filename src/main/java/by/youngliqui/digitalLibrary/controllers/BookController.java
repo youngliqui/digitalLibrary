@@ -20,7 +20,7 @@ public class BookController {
 
     @GetMapping()
     public String index(Model model){
-        model.addAttribute(bookDAO.index());
+        model.addAttribute("books", bookDAO.index());
         return "books/index";
     }
 

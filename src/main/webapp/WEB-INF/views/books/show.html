@@ -12,7 +12,7 @@
 <p th:text="${'Year: ' + book.getYear()}">VALUE</p>
 
 <hr/>
-<form th:action="@{/books/{id}/edit(id=${book.getId()})}">
+<form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">
     <button>edit</button>
 </form>
 

@@ -1,5 +1,7 @@
 package by.youngliqui.digitalLibrary.models;
 
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotEmpty;
 
 public class Book {
@@ -11,7 +13,8 @@ public class Book {
     @NotEmpty(message = "Author should not be empty")
     private String author;
 
-    @NotEmpty(message = "Year of publication should not be empty")
+    @Min(value = 1500, message = "Invalid year")
+    @Max(value = 2024, message = "Invalid year")
     private int year;
 
     public Book() {
