@@ -9,10 +9,9 @@ public class Person {
     @Pattern(regexp = "[A-Z]\\w+ [A-Z]\\w+ [A-Z]\\w+", message = "Your full name should be in this format: Last name First name Patronymic")
     private String name;
 
-    @NotEmpty(message = "Year of birth should not be empty")
     @Min(value = 1900, message = "Year of birth should be valid")
     @Max(value = 2023, message = "Year of birth should be valid")
-    private int year;
+    private int birthYear;
 
     @NotEmpty(message = "Email should not be empty")
     @Email(message = "Email should be valid")
@@ -22,10 +21,10 @@ public class Person {
     public Person() {
     }
 
-    public Person(int id, String name, int year, String email) {
+    public Person(int id, String name, int birthYear, String email) {
         this.id = id;
         this.name = name;
-        this.year = year;
+        this.birthYear = birthYear;
         this.email = email;
     }
 
@@ -45,12 +44,12 @@ public class Person {
         this.name = name;
     }
 
-    public int getYear() {
-        return year;
+    public int getBirthYear() {
+        return birthYear;
     }
 
-    public void setYear(int year) {
-        this.year = year;
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
     }
 
     public String getEmail() {
