@@ -11,6 +11,19 @@
 <p th:text="${'Author: ' + book.getAuthor()}">VALUE</p>
 <p th:text="${'Year: ' + book.getYear()}">VALUE</p>
 
+
+<form th:method="PATCH" th:action="@{/books/{id}/appoint(id=${book.getId()})}">
+    This book is free, who will you assign it to?
+    <br/>
+    <label for="book">Select person:</label>
+    <select th:object="${book}" th:field="*{id}" id="book">
+        <option th:each="person : ${people}" th:value="${person.getId()}"
+            th:text="${person.getName()}"></option>
+    </select>
+
+    <input type="submit" value="Assign a book"/>
+</form>
+
 <hr/>
 <form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">
     <button>edit</button>
