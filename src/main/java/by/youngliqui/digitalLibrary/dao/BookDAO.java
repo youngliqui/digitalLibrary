@@ -59,4 +59,15 @@ public class BookDAO {
         jdbcTemplate.update("UPDATE Book SET person_id=? WHERE book_id=?",
                 personId, bookId);
     }
+
+    public void free(int id) {
+        jdbcTemplate.update("UPDATE Book SET person_id=null WHERE book_id=?", id);
+    }
+
+    public Person getOwner(int id) {
+        return jdbcTemplate.query("SELECT Person.person_id, Person.name, Person.birth_year, Person.email " +
+                        "FROM person JOIN book ON person.person_id = book.person_id WHERE book_id=?",
+                new Object[]{id},
+                new PersonMapper()).stream().findAny().orElse(null);
+    }
 }

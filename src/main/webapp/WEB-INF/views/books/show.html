@@ -12,6 +12,7 @@
 <p th:text="${'Year: ' + book.getYear()}">VALUE</p>
 
 
+<div th:if="${owner == null}">
 <form th:method="PATCH" th:action="@{/books/{id}/appoint(id=${book.getId()})}">
     This book is free, who will you assign it to?
     <br/>
@@ -20,9 +21,17 @@
         <option th:each="person : ${people}" th:value="${person.getId()}"
             th:text="${person.getName()}"></option>
     </select>
-
+    <input type="submit" value="appoint"/>
+</form>
+</div>
+<div th:else>
+<p th:text="${'The book is now in: ' + owner.getName()}">OWNER</p>
+<form th:method="PATCH" th:action="@{/books/{id}/free(id=${book.getId()})}">
     <input type="submit" value="Assign a book"/>
 </form>
+</div>
+
+
 
 <hr/>
 <form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">

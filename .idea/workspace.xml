@@ -9,12 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="fix bugs">
+    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="book appoint">
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/BookDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +225,8 @@
       <workItem from="1696669622769" duration="5862000" />
       <workItem from="1696678279810" duration="2364000" />
       <workItem from="1696680680384" duration="23315000" />
-      <workItem from="1696869093660" duration="5863000" />
+      <workItem from="1696869093660" duration="7783000" />
+      <workItem from="1696944879074" duration="7483000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -326,7 +326,14 @@
       <option name="project" value="LOCAL" />
       <updated>1696780961100</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="book appoint">
+      <created>1696875102353</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1696875102353</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -367,6 +374,7 @@
     <MESSAGE value="delete and edit book" />
     <MESSAGE value="bug fix" />
     <MESSAGE value="fix bugs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
+    <MESSAGE value="book appoint" />
+    <option name="LAST_COMMIT_MESSAGE" value="book appoint" />
   </component>
 </project>

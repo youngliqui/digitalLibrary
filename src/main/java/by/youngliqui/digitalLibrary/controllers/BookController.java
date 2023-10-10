@@ -55,6 +55,7 @@ public class BookController {
     public String show(@PathVariable("id") int id, Model model) {
         model.addAttribute("book", bookDAO.show(id));
         model.addAttribute("people", personDAO.index());
+        model.addAttribute("owner", bookDAO.getOwner(id));
         return "books/show";
     }
 
@@ -68,6 +69,12 @@ public class BookController {
     public String appoint(@PathVariable("id") int id,
                           @ModelAttribute("person") Person person) {
         bookDAO.appoint(id, person.getId());
+        return "redirect:/books/{id}";
+    }
+
+    @PatchMapping("/{id}/free")
+    public String appoint(@PathVariable("id") int id) {
+        bookDAO.free(id);
         return "redirect:/books/{id}";
     }
 
