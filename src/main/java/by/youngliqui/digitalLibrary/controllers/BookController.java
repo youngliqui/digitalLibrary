@@ -73,7 +73,7 @@ public class BookController {
     }
 
     @PatchMapping("/{id}/free")
-    public String appoint(@PathVariable("id") int id) {
+    public String free(@PathVariable("id") int id) {
         bookDAO.free(id);
         return "redirect:/books/{id}";
     }
