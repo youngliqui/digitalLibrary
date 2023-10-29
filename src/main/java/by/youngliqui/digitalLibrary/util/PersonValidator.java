@@ -1,7 +1,7 @@
 package by.youngliqui.digitalLibrary.util;
 
-import by.youngliqui.digitalLibrary.dao.PersonDAO;
 import by.youngliqui.digitalLibrary.models.Person;
+import by.youngliqui.digitalLibrary.services.PeopleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
@@ -12,11 +12,11 @@ import java.util.Optional;
 @Component
 public class PersonValidator implements Validator {
 
-    private final PersonDAO personDAO;
+    private final PeopleService peopleService;
 
     @Autowired
-    public PersonValidator(PersonDAO personDAO) {
-        this.personDAO = personDAO;
+    public PersonValidator(PeopleService peopleService) {
+        this.peopleService = peopleService;
     }
 
     @Override
@@ -28,11 +28,18 @@ public class PersonValidator implements Validator {
     public void validate(Object target, Errors errors) {
         Person person = (Person) target;
 
-        Optional<Person> showPerson = personDAO.show(person.getEmail());
+        Optional<Person> showPersonByEmail = peopleService.findOneByEmail(person.getEmail());
+        Optional<Person> showPersonByName = peopleService.findOneByName(person.getName());
 
-        if (showPerson.isPresent()) {
-            if (showPerson.get().getId() != person.getId()) {
+        if (showPersonByEmail.isPresent()) {
+            if (showPersonByEmail.get().getId() != person.getId()) {
                 errors.rejectValue("email", "", "This email is already taken");
+            }
+        }
+
+        if (showPersonByName.isPresent()) {
+            if (showPersonByName.get().getId() != person.getId()) {
+                errors.rejectValue("name", "", "This full name is already taken");
             }
         }
     }

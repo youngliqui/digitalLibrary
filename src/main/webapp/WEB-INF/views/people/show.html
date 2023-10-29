@@ -8,8 +8,9 @@
 
 <p th:text="${'ID: ' + person.getId()}">VALUE</p>
 <p th:text="${'Name: ' + person.getName()}">VALUE</p>
-<p th:text="${'Year of birth: ' + person.getBirthYear()}">VALUE</p>
+<p th:text="${'Date of birth: ' + person.showDateOfBirth()}">VALUE</p>
 <p th:text="${'Email: ' + person.getEmail()}">VALUE</p>
+<p th:text="${'Created at: ' + person.showCreatedAt()}">VALUE</p>
 
 <hr/>
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
