@@ -12,6 +12,11 @@
 <p th:text="${'Email: ' + person.getEmail()}">VALUE</p>
 <p th:text="${'Created at: ' + person.showCreatedAt()}">VALUE</p>
 
+<div th:if="${books != null}" th:each="book : ${books}">
+  <a th:href="@{/books/{id}(id=${book.getId()})}"
+     th:text="${book.getName() + ' , '">book</a>
+</div>
+
 <hr/>
 <form th:method="GET" th:action="@{/people/{id}/edit(id=${person.getId()})}">
   <button>edit</button>

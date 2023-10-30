@@ -1,5 +1,7 @@
 package by.youngliqui.digitalLibrary.config;
 
+
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -11,6 +13,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
+import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -26,10 +29,10 @@ import java.util.Properties;
 
 @Configuration
 @ComponentScan("by.youngliqui.digitalLibrary")
-@EnableWebMvc
-@EnableTransactionManagement
 @PropertySource("classpath:hibernate.properties")
 @EnableJpaRepositories("by.youngliqui.digitalLibrary.repositories")
+@EnableWebMvc
+@EnableTransactionManagement
 public class SpringConfig implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
@@ -69,6 +72,7 @@ public class SpringConfig implements WebMvcConfigurer {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
+
         dataSource.setDriverClassName(environment.getRequiredProperty("hibernate.driver_class"));
         dataSource.setUrl(environment.getRequiredProperty("hibernate.connection.url"));
         dataSource.setUsername(environment.getRequiredProperty("hibernate.connection.username"));
@@ -89,6 +93,10 @@ public class SpringConfig implements WebMvcConfigurer {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         final LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
+        em.setPackagesToScan("by.youngliqui.digitalLibrary.models");
+
+        final HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
+        em.setJpaVendorAdapter(vendorAdapter);
         em.setJpaProperties(hibernateProperties());
 
         return em;

@@ -9,30 +9,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="Russian language support">
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/PeopleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/PeopleService.java" afterDir="false" />
+    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="Spring Data JPA add">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties.origin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/MySpringMvcDispatcherServletInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/MySpringMvcDispatcherServletInitializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/config/SpringConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/PeopleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/BookDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/BookMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/PersonDAO.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/dao/PersonMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/util/BookValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/util/BookValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/PeopleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/PeopleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/PeopleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +246,8 @@
       <workItem from="1697561056269" duration="1865000" />
       <workItem from="1697811274914" duration="2000" />
       <workItem from="1698566549932" duration="1179000" />
-      <workItem from="1698567746070" duration="16257000" />
+      <workItem from="1698567746070" duration="23322000" />
+      <workItem from="1698666281291" duration="872000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -375,7 +368,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697561918244</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Spring Data JPA add">
+      <created>1698611698339</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1698611698339</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -419,6 +419,7 @@
     <MESSAGE value="book appoint" />
     <MESSAGE value="book free" />
     <MESSAGE value="Russian language support" />
-    <option name="LAST_COMMIT_MESSAGE" value="Russian language support" />
+    <MESSAGE value="Spring Data JPA add" />
+    <option name="LAST_COMMIT_MESSAGE" value="Spring Data JPA add" />
   </component>
 </project>

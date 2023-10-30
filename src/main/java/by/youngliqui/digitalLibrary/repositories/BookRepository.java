@@ -5,10 +5,12 @@ import by.youngliqui.digitalLibrary.models.Person;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Repository
 public interface BookRepository extends JpaRepository<Book, Integer> {
     public List<Book> findBooksByOwnerId(int personId);
 
@@ -16,10 +18,10 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Query("update Book b set b.owner.id=?1 where b.id=?2")
     void setPersonIdByBookId(int bookId, int personId);
 
-    @Query("select Person from Book b join Person p on b.owner.id=p.id where b.id=?")
+    @Query("select Person from Book b join Person p on b.owner.id=p.id where b.id=?1")
     public Optional<Person> findBookOwnerByBookId(int bookId);
 
     @Modifying
-    @Query("update Book b set b.owner.id=NULL where b.id=?")
+    @Query("update Book b set b.owner.id=NULL where b.id=?1")
     void setPersonIdNullByBookId(int bookId);
 }
