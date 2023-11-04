@@ -12,38 +12,40 @@
 <p th:text="${'Year of production: ' + book.getYearOfProduction()}">VALUE</p>
 
 
-<div th:if="${owner == null}">
-<form th:method="PATCH" th:action="@{/books/{id}/appoint(id=${book.getId()})}">
-    This book is free, who will you assign it to?
-    <br/>
-    <label for="book">Select person:</label>
-    <select th:object="${book}" th:field="*{id}" id="book">
-        <option th:each="person : ${people}" th:value="${person.getId()}"
-            th:text="${person.getName()}"></option>
-    </select>
-    <input type="submit" value="appoint"/>
-</form>
+<div th:if="${owner}">
+    <span>Book is now at: </span> <span th:text="${owner.getName()}">Person Name</span>
+
+    <form th:method="PATCH" th:action="@{/books/{id}/release(id=${book.getId()})}">
+        <input type="submit" value="assign a book"/>
+    </form>
 </div>
-<div th:else>
-<p th:text="${'The book is now in: ' + owner.getName()}">OWNER</p>
-<form th:method="PATCH" th:action="@{/books/{id}/release(id=${book.getId()})}">
-    <input type="submit" value="Assign a book"/>
-</form>
+
+<div th:if="${people}">
+    <span>This book is free, who will you assign it to?</span>
+    <form th:method="PATCH" th:action="@{/books/{id}/appoint(id=${book.getId()})}">
+        <label for="person">Select person:</label>
+        <select th:object="${person}" th:field="*{id}" id="person">
+            <option th:each="person : ${people}" th:value="${person.getId()}"
+                th:text="${person.getName()}">
+            </option>
+        </select>
+       <input type="submit" value="appoint"/>
+    </form>
 </div>
 
 
 
 <hr/>
 <form th:method="GET" th:action="@{/books/{id}/edit(id=${book.getId()})}">
-    <button>edit</button>
+    <input type="submit" value="edit"/>
 </form>
 
 <form th:method="DELETE" th:action="@{/books/{id}(id=${book.getId()})}">
-    <button>delete</button>
+    <input type="submit" value="delete"/>
 </form>
 
 <form th:method="GET" th:action="@{/books}">
-    <button>back</button>
+    <input type="submit" value="back"/>
 </form>
 
 </body>

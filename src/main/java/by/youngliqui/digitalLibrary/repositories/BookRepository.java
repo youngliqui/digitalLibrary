@@ -12,14 +12,14 @@ import java.util.Optional;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book, Integer> {
-    public List<Book> findBooksByOwnerId(int personId);
+    List<Book> findBooksByOwnerId(int ownerId);
 
     @Modifying
     @Query("update Book b set b.owner.id=?1 where b.id=?2")
     void setPersonIdByBookId(int bookId, int personId);
 
     @Query("select Person from Book b join Person p on b.owner.id=p.id where b.id=?1")
-    public Optional<Person> findBookOwnerByBookId(int bookId);
+    Optional<Person> findBookOwnerByBookId(int bookId);
 
     @Modifying
     @Query("update Book b set b.owner.id=NULL where b.id=?1")
