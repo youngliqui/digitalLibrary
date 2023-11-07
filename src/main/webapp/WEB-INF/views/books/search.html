@@ -21,6 +21,9 @@
         <br/>
     </div>
 </div>
+<div th:if="${books.isEmpty() && param.request != null}">
+    Nothing found!
+</div>
 
 </body>
 </html>

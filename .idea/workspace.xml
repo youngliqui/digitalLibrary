@@ -9,14 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="pagenation index">
+    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="adding search page">
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/search.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +236,7 @@
       <workItem from="1698566549932" duration="1179000" />
       <workItem from="1698567746070" duration="23322000" />
       <workItem from="1698666281291" duration="1925000" />
-      <workItem from="1699018306369" duration="29221000" />
+      <workItem from="1699018306369" duration="31018000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -402,7 +399,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699344856410</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="adding search page">
+      <created>1699368160568</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699368160568</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,6 +455,7 @@
     <MESSAGE value="thymeleaf fixed" />
     <MESSAGE value="fixed bugs" />
     <MESSAGE value="pagenation index" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagenation index" />
+    <MESSAGE value="adding search page" />
+    <option name="LAST_COMMIT_MESSAGE" value="adding search page" />
   </component>
 </project>
