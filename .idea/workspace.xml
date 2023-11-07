@@ -13,7 +13,8 @@
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/repositories/BookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +237,7 @@
       <workItem from="1698566549932" duration="1179000" />
       <workItem from="1698567746070" duration="23322000" />
       <workItem from="1698666281291" duration="1925000" />
-      <workItem from="1699018306369" duration="15384000" />
+      <workItem from="1699018306369" duration="19721000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -385,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699123222923</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="fixed bugs">
+      <created>1699205630090</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699205630090</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,31 +442,5 @@
     <MESSAGE value="thymeleaf fixed" />
     <MESSAGE value="fixed bugs" />
     <option name="LAST_COMMIT_MESSAGE" value="fixed bugs" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
-          <line>52</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

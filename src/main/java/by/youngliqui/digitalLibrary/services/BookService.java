@@ -4,6 +4,7 @@ import by.youngliqui.digitalLibrary.models.Book;
 import by.youngliqui.digitalLibrary.models.Person;
 import by.youngliqui.digitalLibrary.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -23,6 +24,10 @@ public class BookService {
 
     public List<Book> findAll() {
         return bookRepository.findAll();
+    }
+
+    public List<Book> findAll(int page, int itemsPerPage) {
+        return bookRepository.findAll(PageRequest.of(page, itemsPerPage)).getContent();
     }
 
     public Book findOne(int id) {
