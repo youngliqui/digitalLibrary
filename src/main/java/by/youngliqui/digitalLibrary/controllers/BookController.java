@@ -42,6 +42,36 @@ public class BookController {
         return "books/index";
     }
 
+    @GetMapping(params = "sort_by_year")
+    public String index(@RequestParam("sort_by_year") boolean sort, Model model) {
+        if (sort) {
+            model.addAttribute("books", bookService.findAll("yearOfProduction"));
+        }
+        else {
+            model.addAttribute("books", bookService.findAll());
+        }
+
+        return "books/index";
+    }
+
+    @GetMapping(params = {"page", "books_per_page", "sort_by_year"})
+    public String index(@RequestParam("page") int page, @RequestParam("books_per_page") int booksPerPage,
+                        @RequestParam("sort_by_year") boolean sort, Model model) {
+        if (booksPerPage == 0 && !sort) {
+            model.addAttribute("books", bookService.findAll());
+        }
+        else if (booksPerPage == 0) {
+            model.addAttribute("books", bookService.findAll("yearOfProduction"));
+        }
+        else if (!sort) {
+            model.addAttribute("books", bookService.findAll(page, booksPerPage));
+        } else {
+            model.addAttribute("books", bookService.findAll(page, booksPerPage, "yearOfProduction"));
+        }
+
+        return "books/index";
+    }
+
     @GetMapping("/new")
     public String newBook(@ModelAttribute("book") Book book) {
         return "books/new";
@@ -108,4 +138,20 @@ public class BookController {
         return "redirect:/books/{id}";
     }
 
+    @GetMapping("/search")
+    public String search() {
+        return "books/search";
+    }
+
+    @GetMapping(value = "/search", params = "request")
+    public String search(@RequestParam("request") String request, Model model) {
+        if (request == null) {
+            model.addAttribute("books", bookService.findAll());
+        }
+        else {
+            model.addAttribute("books", bookService.findBooksByNameStartingWith(request));
+        }
+
+        return "books/search";
+    }
 }

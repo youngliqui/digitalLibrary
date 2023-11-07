@@ -5,6 +5,7 @@ import by.youngliqui.digitalLibrary.models.Person;
 import by.youngliqui.digitalLibrary.repositories.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -28,6 +29,14 @@ public class BookService {
 
     public List<Book> findAll(int page, int itemsPerPage) {
         return bookRepository.findAll(PageRequest.of(page, itemsPerPage)).getContent();
+    }
+
+    public List<Book> findAll(String nameOfSortedField) {
+        return bookRepository.findAll(Sort.by(nameOfSortedField));
+    }
+
+    public List<Book> findAll(int page, int itemsPerPage, String nameOfSortedField) {
+        return bookRepository.findAll(PageRequest.of(page, itemsPerPage, Sort.by(nameOfSortedField))).getContent();
     }
 
     public Book findOne(int id) {
@@ -62,5 +71,9 @@ public class BookService {
     @Transactional
     public void release(int id) {
         bookRepository.setPersonIdNullByBookId(id);
+    }
+
+    public List<Book> findBooksByNameStartingWith(String startingWith) {
+        return bookRepository.findBooksByNameStartingWith(startingWith);
     }
 }

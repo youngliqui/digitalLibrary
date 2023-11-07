@@ -25,4 +25,6 @@ public interface BookRepository extends JpaRepository<Book, Integer> {
     @Modifying
     @Query("update Book b set b.owner.id=NULL where b.id=?1")
     void setPersonIdNullByBookId(int bookId);
+
+    List<Book> findBooksByNameStartingWith(String startingWith);
 }
