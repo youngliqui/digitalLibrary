@@ -28,9 +28,16 @@ public class Book {
     @DateTimeFormat(pattern = "dd/MM/yyyy")
     private Date yearOfProduction;
 
+    @Column(name = "date_of_capture")
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date dateOfCapture;
+
     @ManyToOne
     @JoinColumn(name = "person_id", referencedColumnName = "person_id")
     private Person owner;
+
+    @Transient
+    private boolean isOverdue;
 
     public Book() {
     }
@@ -45,6 +52,37 @@ public class Book {
         this.name = name;
         this.author = author;
         this.yearOfProduction = yearOfProduction;
+    }
+
+    public Book(String name, String author, Date yearOfProduction, Date dateOfCapture) {
+        this.name = name;
+        this.author = author;
+        this.yearOfProduction = yearOfProduction;
+        this.dateOfCapture = dateOfCapture;
+    }
+
+    public Book(String name, String author, Date yearOfProduction, Date dateOfCapture, Person owner) {
+        this.name = name;
+        this.author = author;
+        this.yearOfProduction = yearOfProduction;
+        this.dateOfCapture = dateOfCapture;
+        this.owner = owner;
+    }
+
+    public Date getDateOfCapture() {
+        return dateOfCapture;
+    }
+
+    public void setDateOfCapture(Date dateOfCapture) {
+        this.dateOfCapture = dateOfCapture;
+    }
+
+    public boolean isOverdue() {
+        return isOverdue;
+    }
+
+    public void setOverdue(boolean overdue) {
+        isOverdue = overdue;
     }
 
     public int getId() {

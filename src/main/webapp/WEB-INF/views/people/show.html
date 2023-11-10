@@ -22,8 +22,10 @@
   <hr/>
   <b>Books:</b>
   <br/>
-  <table th:each="book : ${books}">
-    <tr th:text="${book.getName() + ', ' + book.getAuthor() + ', ' + book.getYearOfProduction()}">book</tr>
+  <table>
+    <tr th:each="book : ${books}">
+      <td th:style="${book.isOverdue()} ? 'color:red' : ''" th:text="${book.getName() + ', ' + book.getAuthor() + ', ' + book.getYearOfProduction()}">book</td>
+    </tr>
   </table>
   <hr/>
 </div>

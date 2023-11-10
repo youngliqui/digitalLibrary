@@ -18,10 +18,13 @@ public class PeopleService {
     private final PeopleRepository peopleRepository;
     private final BookRepository bookRepository;
 
+    private final BookService bookService;
+
     @Autowired
-    public PeopleService(PeopleRepository peopleRepository, BookRepository bookRepository) {
+    public PeopleService(PeopleRepository peopleRepository, BookRepository bookRepository, BookService bookService) {
         this.peopleRepository = peopleRepository;
         this.bookRepository = bookRepository;
+        this.bookService = bookService;
     }
 
     public List<Person> findAll() {
@@ -62,6 +65,10 @@ public class PeopleService {
     }
 
     public List<Book> findBooksByPersonId(int id) {
-        return bookRepository.findBooksByOwnerId(id);
+        List<Book> books = bookRepository.findBooksByOwnerId(id);
+
+        books.forEach(book -> bookService.checkOverdueBook(book.getId()));
+
+        return books;
     }
 }
