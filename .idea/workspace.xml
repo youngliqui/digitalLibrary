@@ -9,16 +9,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="adding search page">
+    <list default="true" id="84fbb8aa-ff41-4e7d-810a-919ea88e58d8" name="Changes" comment="checking the overdue book">
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/hibernate.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/models/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/BookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/PeopleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/services/PeopleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,7 +237,8 @@
       <workItem from="1698567746070" duration="23322000" />
       <workItem from="1698666281291" duration="1925000" />
       <workItem from="1699018306369" duration="31188000" />
-      <workItem from="1699638567661" duration="9468000" />
+      <workItem from="1699638567661" duration="9606000" />
+      <workItem from="1699680138165" duration="2004000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1696602365304</created>
@@ -419,7 +415,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699370009226</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="checking the overdue book">
+      <created>1699648102752</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699648102752</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,6 +472,33 @@
     <MESSAGE value="fixed bugs" />
     <MESSAGE value="pagenation index" />
     <MESSAGE value="adding search page" />
-    <option name="LAST_COMMIT_MESSAGE" value="adding search page" />
+    <MESSAGE value="checking the overdue book" />
+    <option name="LAST_COMMIT_MESSAGE" value="checking the overdue book" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
+          <line>105</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
+          <line>110</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
+          <line>113</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/youngliqui/digitalLibrary/controllers/BookController.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

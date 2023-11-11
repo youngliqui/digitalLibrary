@@ -87,6 +87,10 @@ public class BookService {
 
     public boolean checkOverdueBook(int id) {
         Book book = bookRepository.findById(id).get();
+        if (book.getOwner() == null) {
+            book.setOverdue(false);
+            return false;
+        }
         Date currentTime = new Date();
         if (currentTime.getTime() - book.getDateOfCapture().getTime() > TIME_OF_DELAY) {
             book.setOverdue(true);
